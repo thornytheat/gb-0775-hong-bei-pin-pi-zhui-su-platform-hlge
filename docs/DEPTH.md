@@ -11,6 +11,7 @@
 | M5 重量守恒追溯 | 对平工作批、仓内和各产地账 | `/api/lots/balance` | `app/modules/balance/service.py` `app/modules/balance/stock.py` | `tests/test_balance.py` |
 | M6 批次留档复跑 | 查在柜卷联、按原件复算 | `/api/runs` | `app/modules/runs/cabinet.py` `app/modules/runs/service.py` | `tests/test_runs.py` |
 | M7 配方证据签发 | 从包装号取经过校验的来料证据 | `/api/export/<id>` | `app/modules/proof/recall.py` `app/modules/proof/service.py` | `tests/test_proof.py` |
+| M8 产地批召回圈定 | 区分确认涉及、尚待排除、可放行，对账在库扣留，按归档重算 | `/api/recalls` | `app/modules/recall/scope.py` `app/modules/recall/service.py` `app/modules/recall/store.py` | `tests/test_recall.py` |
 
 ## 陷阱登记
 

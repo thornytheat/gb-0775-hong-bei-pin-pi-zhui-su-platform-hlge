@@ -1,6 +1,6 @@
-def test_seven_pages(client):
+def test_eight_pages(client):
     sections={'balance':'重量勾稽卷联','weighins':'秤单收讫联','supply':'来源额度联','lineage':'拼批血缘卷联',
-              'packing':'返料占用与余额','runs':'在柜卷联','proof':'包装批次追溯联'}
+              'packing':'返料占用与余额','runs':'在柜卷联','proof':'包装批次追溯联','recall':'产地批召回联'}
     for view,text in sections.items():
         response=client.get('/ledger/'+view)
         assert response.status_code==200 and text in response.get_data(as_text=True)
